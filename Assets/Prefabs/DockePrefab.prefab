@@ -55,9 +55,10 @@ GameObject:
   - component: {fileID: 114610369063051820}
   - component: {fileID: 50595770022587272}
   - component: {fileID: 61680914199783078}
+  - component: {fileID: 95513679232878406}
   m_Layer: 8
   m_Name: DockePrefab
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1054853435422344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.12, z: 0}
+  m_LocalPosition: {x: 0, y: -0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4899920621640298}
@@ -95,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298701196045828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.68, y: 0.5, z: 0}
+  m_LocalPosition: {x: -4.91, y: 0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4030984838950344}
@@ -119,9 +120,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 2
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61381948972314034
 BoxCollider2D:
@@ -135,7 +136,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.071112394, y: -0.39822912}
+  m_Offset: {x: 0.071112394, y: -0.24960911}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -146,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8577752, y: 0.20354176}
+  m_Size: {x: 0.8577752, y: 0.15730453}
   m_EdgeRadius: 0
 --- !u!61 &61680914199783078
 BoxCollider2D:
@@ -160,19 +161,36 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03178954, y: -0.021193027}
+  m_Offset: {x: 0.03178954, y: 0.03164947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 1.5}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9364209, y: 0.8304558}
+  m_Size: {x: 0.9364209, y: 0.7247708}
   m_EdgeRadius: 0
+--- !u!95 &95513679232878406
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298701196045828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe4bf152cae9d2c46af47489d156951d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114610369063051820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,9 +204,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1995073944881742, guid: 02ff4de7ca8fa974ca2f2ed11f789c11,
     type: 2}
+  gustPrefab: {fileID: 1876886908109988, guid: 4dab485af977a854a88a4d238ffa2aa4, type: 2}
   projectileSpawnLocation: {fileID: 4171753780491484}
   bloop: {fileID: 8300000, guid: 829f3ff2389aabe4d94407c15e1987f3, type: 3}
   duckHit: {fileID: 8300000, guid: c1a2edaf07c23004a95c8c3618821db9, type: 3}
+  gust: {fileID: 8300000, guid: 6a6991258562b59469a19a4f86ac4c65, type: 3}
   duckSpeed: 5
   flapSpeed: 5
 --- !u!114 &114612176697447426
@@ -237,7 +257,7 @@ SpriteRenderer:
   m_SortingLayerID: -2073233629
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c5bf3503759db14095e07285a6adf17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d4b7992833cbd448a9b495aa4d0030c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

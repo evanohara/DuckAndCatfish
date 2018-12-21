@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212613581442774052}
   - component: {fileID: 114333113059710872}
   - component: {fileID: 61907970936667110}
-  - component: {fileID: 95290360169517396}
   m_Layer: 0
   m_Name: HunterPrefab
   m_TagString: Enemy
@@ -97,23 +96,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!95 &95290360169517396
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1280187954536518}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e3b3c62d19f13ce449baa1db28b5913e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114333113059710872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,13 +107,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90f8e12620b0ee4e8ee87d17f144964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitpoints: 2
   bulletPrefab: {fileID: 1956652738435402, guid: e6149359e43ef0b47a890e7cdb913736,
     type: 2}
   bulletSpawnLocation: {fileID: 4587024270344392}
+  target: {fileID: 4899920621640298, guid: 2f651ebc96536614bb440a33c16313e4, type: 2}
+  target2: {fileID: 4297796773153222, guid: 1bb0652f4896f264fa9ed728b9889b8d, type: 2}
   gunshot: {fileID: 8300000, guid: b291af15db9abbf4aa544675aa68d539, type: 3}
   scream: {fileID: 8300000, guid: 02727ad214947c246a3aa00da6aee763, type: 3}
   punch: {fileID: 8300000, guid: b19bffcf98888ba459bfe001703088c0, type: 3}
-  hitpoints: 2
 --- !u!212 &212613581442774052
 SpriteRenderer:
   m_ObjectHideFlags: 1

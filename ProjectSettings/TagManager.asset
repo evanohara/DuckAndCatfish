@@ -8,6 +8,11 @@ TagManager:
   - PlayerWeapon
   - Airline
   - Waterline
+  - Duck
+  - Catfish
+  - Gust
+  - TortoiseFinishLine
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -23,8 +28,8 @@ TagManager:
   - Catfish
   - Waterline
   - Airline
-  - 
-  - 
+  - Enemy
+  - CameraBoundary
   - 
   - 
   - 
